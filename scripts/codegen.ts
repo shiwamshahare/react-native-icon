@@ -221,7 +221,7 @@ const Icon = React.forwardRef<React.ElementRef<typeof Svg>, IconComponentProps>(
     if (!IconComponent) {
       if (__DEV__) {
         console.warn(
-          \`[react-native-icons-shiwam] Unknown icon name: "\${name}". \` +
+          \`[react-native-icon] Unknown icon name: "\${name}". \` +
           \`Available icons: \${Object.keys(iconRegistry).join(', ')}\`,
         );
       }
@@ -269,7 +269,7 @@ function generateIndexFile(componentNames: string[]): void {
 }
 
 async function main() {
-  console.log('🔧 react-native-icons-shiwam codegen starting...\n');
+  console.log('🔧 react-native-icon codegen starting...\n');
 
   // Ensure output directories exist
   if (!fs.existsSync(SRC_DIR)) {
