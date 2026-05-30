@@ -221,7 +221,7 @@ const Icon = React.forwardRef<React.ElementRef<typeof Svg>, IconComponentProps>(
     if (!IconComponent) {
       if (__DEV__) {
         console.warn(
-          \`[react-native-icon] Unknown icon name: "\${name}". \` +
+          \`[rn-vector-icons] Unknown icon name: "\${name}". \` +
           \`Available icons: \${Object.keys(iconRegistry).join(', ')}\`,
         );
       }
@@ -269,7 +269,7 @@ function generateIndexFile(componentNames: string[]): void {
 }
 
 async function main() {
-  console.log('🔧 react-native-icon codegen starting...\n');
+  console.log('🔧 rn-vector-icons codegen starting...\n');
 
   // Ensure output directories exist
   if (!fs.existsSync(SRC_DIR)) {

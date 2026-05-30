@@ -1,8 +1,8 @@
-# react-native-icon
+# rn-vector-icons
 
 > A robust, production-ready, tree-shakeable React Native vector icon library.
 
-**`react-native-icon`** is a custom SVG-to-Component engine tailored for React Native. It automatically ingests raw SVG assets, generates multiple stylistic variants (duotone, open, filled), and bundles them into highly optimized, fully typed React components.
+**`rn-vector-icons`** is a custom SVG-to-Component engine tailored for React Native. It automatically ingests raw SVG assets, generates multiple stylistic variants (duotone, open, filled), and bundles them into highly optimized, fully typed React components.
 
 ---
 
@@ -23,7 +23,7 @@
 Since this package is hosted directly on GitHub, you can install it instantly into any React Native or Expo project by running:
 
 ```bash
-npm install github:shiwamshahare/react-native-icon
+npm install rn-vector-icons
 ```
 
 *(Note: `react-native-svg` is now automatically installed alongside this library as a core dependency, meaning absolutely no manual linking is required!)*
@@ -37,7 +37,7 @@ npm install github:shiwamshahare/react-native-icon
 The easiest way to render icons is via the unified `<Icon />` component. Your IDE will auto-complete the `name` prop for all 1,300+ available icons.
 
 ```tsx
-import { Icon } from 'react-native-icon';
+import { Icon } from 'rn-vector-icons';
 
 // 1. Basic usage — Renders the default variant (duotone)
 <Icon name="healer-ambulance" size={24} />
@@ -82,7 +82,7 @@ import {
   HealerAmbulanceIcon, 
   HealerAmbulanceFilledIcon, 
   FlorenceUserOpenIcon 
-} from 'react-native-icon';
+} from 'rn-vector-icons';
 
 <HealerAmbulanceIcon size={32} color="#3B82F6" />
 <FlorenceUserOpenIcon size={24} color="#EF4444" strokeWidth={1.5} />

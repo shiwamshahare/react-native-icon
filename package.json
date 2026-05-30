@@ -1,5 +1,5 @@
 {
-  "name": "react-native-icon",
+  "name": "rn-vector-icons",
   "version": "0.1.0",
   "description": "A production-ready React Native vector icon library built from SVG sources",
   "main": "dist/index.js",
