@@ -20,7 +20,7 @@ const Icon = React.forwardRef<React.ElementRef<typeof Svg>, IconComponentProps>(
     if (!IconComponent) {
       if (__DEV__) {
         console.warn(
-          `[react-native-icon] Unknown icon name: "${name}". ` +
+          `[rn-vector-icons] Unknown icon name: "${name}". ` +
           `Available icons: ${Object.keys(iconRegistry).join(', ')}`,
         );
       }
