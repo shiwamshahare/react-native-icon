@@ -20,11 +20,13 @@
 
 ## 📦 Installation
 
-Install the library in your project:
+Since this package is hosted directly on GitHub, you can install it instantly into any React Native or Expo project by running:
 
 ```bash
-npm install react-native-icon
+npm install github:shiwamshahare/react-native-icon
 ```
+
+*(Note: `react-native-svg` is now automatically installed alongside this library as a core dependency, meaning absolutely no manual linking is required!)*
 
 ---
 
@@ -71,9 +73,9 @@ Each category supports the standard **three variants**:
 2. `florence-user-open` (Monotone/Stroked)
 3. `florence-user-filled` (Solid/Filled)
 
-### Individual Imports (For Tree-Shaking)
+### Individual Imports (For strict Tree-Shaking)
 
-If you prefer to bypass the unified component for strict tree-shaking rules, import the components directly:
+If you prefer to bypass the unified component to enforce strict tree-shaking rules, import the components directly:
 
 ```tsx
 import { 
@@ -162,5 +164,5 @@ rn-icon-library/
 
 ## 📜 License
 
-MIT License.
-# react-native-icon
+[MIT License](./LICENSE)
+Copyright (c) 2026 Shiwam Shahare
