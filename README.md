@@ -1,8 +1,8 @@
-# react-native-icons-shiwam
+# react-native-icon
 
 > A robust, production-ready, tree-shakeable React Native vector icon library.
 
-**`react-native-icons-shiwam`** is a custom SVG-to-Component engine tailored for React Native. It automatically ingests raw SVG assets, generates multiple stylistic variants (duotone, open, filled), and bundles them into highly optimized, fully typed React components.
+**`react-native-icon`** is a custom SVG-to-Component engine tailored for React Native. It automatically ingests raw SVG assets, generates multiple stylistic variants (duotone, open, filled), and bundles them into highly optimized, fully typed React components.
 
 ---
 
@@ -23,22 +23,7 @@
 Install the library in your project:
 
 ```bash
-npm install react-native-icons-shiwam
-```
-
-### Peer Dependencies
-
-This library strictly requires `react-native-svg` to render paths.
-
-**For Expo projects:**
-```bash
-npx expo install react-native-svg
-```
-
-**For Bare React Native projects:**
-```bash
-npm install react-native-svg
-cd ios && pod install
+npm install react-native-icon
 ```
 
 ---
@@ -50,7 +35,7 @@ cd ios && pod install
 The easiest way to render icons is via the unified `<Icon />` component. Your IDE will auto-complete the `name` prop for all 1,300+ available icons.
 
 ```tsx
-import { Icon } from 'react-native-icons-shiwam';
+import { Icon } from 'react-native-icon';
 
 // 1. Basic usage — Renders the default variant (duotone)
 <Icon name="healer-ambulance" size={24} />
