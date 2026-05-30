@@ -1,136 +1,110 @@
 # rn-vector-icons
 
-> A robust, production-ready, tree-shakeable React Native vector icon library.
+> A robust, production-ready React Native vector icon library.
 
-**`rn-vector-icons`** is a custom SVG-to-Component engine tailored for React Native. It automatically ingests raw SVG assets, generates multiple stylistic variants (duotone, open, filled), and bundles them into highly optimized, fully typed React components.
+[![npm version](https://img.shields.io/npm/v/rn-vector-icons.svg)](https://www.npmjs.com/package/rn-vector-icons)
+[![npm downloads](https://img.shields.io/npm/dm/rn-vector-icons.svg)](https://www.npmjs.com/package/rn-vector-icons)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
----
-
-## 🌟 Features
-
-- **🎨 Dynamic Colors** — Complete control over stroke and fill colors via React props.
-- **📏 Scalable Vectors** — Set precise sizes without losing resolution using the `size` prop.
-- **🎭 Multi-Style Generation** — Every SVG automatically receives three variants: `default` (duotone), `-open` (monotone), and `-filled` (solid).
-- **🌳 Tree-Shakeable** — Import exactly what you need. Dead code is eliminated in your application bundle.
-- **📝 Native TypeScript** — 100% typed, granting autocomplete for over 1,300+ icon names.
-- **⚡ Automated Pipeline** — Drop SVGs into a folder, run the codegen script, and components are instantly synthesized.
-- **♿ Accessible** — Full screen-reader support via the `accessibilityLabel` prop.
+**`rn-vector-icons`** provides 5,800+ highly optimized, fully typed SVG icons for React Native and Expo. 
 
 ---
 
-## 📦 Installation
+## Features
 
-Since this package is hosted directly on GitHub, you can install it instantly into any React Native or Expo project by running:
+- **True Duotone Colors** — Support for real two-tone icons via `color` and `secondaryColor` props.
+- **Scalable Vectors** — Precise sizing without resolution loss using the `size` prop.
+- **Multi-Style Variants** — Base (duotone), `-open` (outline), and `-filled` (solid) styles for every icon.
+- **Tree-Shakeable** — Import only what you need.
+- **Native TypeScript** — 100% typed with full autocomplete.
+- **Expo Compatible** — Works flawlessly with Expo managed and bare workflows.
+
+---
+
+##  Installation
+
+### Expo (Recommended)
 
 ```bash
+npx expo install react-native-svg
 npm install rn-vector-icons
 ```
 
-*(Note: `react-native-svg` is now automatically installed alongside this library as a core dependency, meaning absolutely no manual linking is required!)*
+### React Native (Bare)
+
+```bash
+npm install rn-vector-icons react-native-svg
+cd ios && pod install
+```
 
 ---
 
-## 🚀 Usage
+## Usage
 
-### Unified `<Icon />` Component (Recommended)
-
-The easiest way to render icons is via the unified `<Icon />` component. 
-
-#### For TypeScript (`.tsx`)
-If you are using TypeScript, your IDE will automatically auto-complete the `name` prop for all 1,300+ available icons!
+### 1. Unified `<Icon />` Component
 
 ```tsx
 import { Icon } from 'rn-vector-icons';
 
-// 1. Basic usage — Renders the default variant (duotone)
-<Icon name="healer-ambulance" size={24} />
+// Default (duotone) variant — monotone, single color
+<Icon name="email-florence" size={24} color="#000" />
 
-// 2. Monotone usage — Renders the "-open" outline variant
-<Icon name="healer-ambulance-open" size={32} color="#3B82F6" />
+// Outline variant
+<Icon name="email-open-florence" size={32} color="#3B82F6" />
 
-// 3. Solid usage — Renders the "-filled" solid variant
-<Icon name="healer-ambulance-filled" size={48} color="#10B981" />
+// Solid/filled variant
+<Icon name="email-filled-florence" size={48} color="#10B981" />
+```
 
-// 4. Advanced configuration
-<Icon 
-  name="florence-user-open" 
-  size={24} 
-  color="#EF4444" 
-  strokeWidth={1.5}
-  accessibilityLabel="User profile settings" 
+### 2. True Duotone Colors
+
+Pass `secondaryColor` to apply a different color to the accent elements of the icon.
+
+```tsx
+import { Icon } from 'rn-vector-icons';
+
+<Icon
+  name="activity-barbell-florence"
+  size={32}
+  color="#3B82F6"           // Main body color
+  secondaryColor="#BFDBFE"  // Accent/secondary color
 />
 ```
 
-#### For JavaScript (`.jsx`)
-If you are using pure JavaScript, the API is exactly the same! The library is pre-compiled, so it works flawlessly out of the box.
-
-```jsx
-import React from 'react';
-import { View } from 'react-native';
-import { Icon } from 'rn-vector-icons';
-
-export default function MyScreen() {
-  return (
-    <View>
-      <Icon name="freudian-home" size={24} />
-      <Icon name="freudian-home-filled" size={32} color="red" />
-    </View>
-  );
-}
-```
-
-### Available Categories & Styles
-
-The library ships with over **1,300 icons** spanning **6 major categories**:
-- `florence-*`
-- `freudian-*`
-- `healer-*`
-- `hepius-*`
-- `sandow-*`
-- `turing-*`
-
-Each category supports the standard **three variants**:
-1. `florence-user` (Base/Duotone)
-2. `florence-user-open` (Monotone/Stroked)
-3. `florence-user-filled` (Solid/Filled)
-
-### Individual Imports (For strict Tree-Shaking)
-
-If you prefer to bypass the unified component to enforce strict tree-shaking rules, import the components directly:
-
-```tsx
-import { 
-  HealerAmbulanceIcon, 
-  HealerAmbulanceFilledIcon, 
-  FlorenceUserOpenIcon 
-} from 'rn-vector-icons';
-
-<HealerAmbulanceIcon size={32} color="#3B82F6" />
-<FlorenceUserOpenIcon size={24} color="#EF4444" strokeWidth={1.5} />
-```
+> **Note:** Only "Base" variants (without `-open` or `-filled` suffixes) support duotone colors.
 
 ---
 
-## ⚙️ Component API
+## Available Icon Sets
 
-The `<Icon />` component and all individual icon components accept the following props:
+The library ships with **1,300+ base icons** (5,800+ total variants) across 6 icon sets:
 
-| Prop                 | Type                          | Default          | Description                                      |
-| -------------------- | ----------------------------- | ---------------- | ------------------------------------------------ |
-| `name`               | `IconName`                    | **(required)**   | The precise name of the icon to render (only on `<Icon />`) |
-| `size`               | `number`                      | `24`             | The square dimensions (width & height) in pixels |
-| `color`              | `string`                      | `"currentColor"` | Primary color injected into the SVG              |
-| `strokeColor`        | `string`                      | `color`          | Dedicated color for stroked elements             |
-| `strokeWidth`        | `number`                      | `2`              | Adjust the line thickness of stroked variants    |
-| `accessibilityLabel` | `string`                      | `undefined`      | ARIA/Accessibility label for screen readers      |
-| `style`              | `StyleProp<ViewStyle>`        | `undefined`      | React Native ViewStyle passed to the root `Svg`  |
-
-*Note: Any additional props (like `testID`, `onPress`) are spread directly onto the root `Svg` element.*
-
+| Suffix | Description |
+|---|---|
+| `*-florence` | Medical & Healthcare icons |
+| `*-freudian` | Psychology & Mental health icons |
+| `*-healer` | General health & wellness icons |
+| `*-hepius` | Clinical & hospital icons |
+| `*-sandow` | Fitness & physical therapy icons |
+| `*-turing` | General UI & utility icons |
 
 ---
 
-## 📜 License
+## Component API
 
-[MIT License](./LICENSE)
-Copyright (c) 2026 Shiwam Shahare
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `name` | `IconName` | **(required)** | Icon name (only on `<Icon />`) |
+| `size` | `number` | `24` | Width & height in pixels |
+| `color` | `string` | `"currentColor"` | Primary color (fill & stroke) |
+| `secondaryColor` | `string` | `color` | Duotone accent color |
+| `strokeColor` | `string` | `color` | Override stroke color separately |
+| `strokeWidth` | `number` | `2` | Line thickness |
+
+*Any additional props (e.g. `style`, `accessibilityLabel`) are passed directly to the root `<Svg>` element.*
+
+---
+
+## License
+
+[MIT License](./LICENSE) — Copyright © 2026 Shiwam Shahare

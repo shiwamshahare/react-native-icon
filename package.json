@@ -1,30 +1,37 @@
 {
   "name": "rn-vector-icons",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "description": "A production-ready React Native vector icon library built from SVG sources",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "react-native": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "sideEffects": false,
   "scripts": {
     "codegen": "ts-node --project tsconfig.scripts.json scripts/codegen.ts",
-    "build": "npm run codegen && tsc && node scripts/build-esm.js",
+    "build": "npm run codegen && rollup -c rollup.config.js",
     "prepublishOnly": "npm run build",
     "lint": "eslint src/ --ext .ts,.tsx",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" \"scripts/**/*.{ts,js}\""
   },
   "peerDependencies": {
     "react": ">=17",
-    "react-native": ">=0.70"
-  },
-  "dependencies": {
+    "react-native": ">=0.70",
     "react-native-svg": ">=13"
   },
   "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
+    "@babel/preset-typescript": "^7.29.7",
+    "@rollup/plugin-babel": "^7.1.0",
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",
@@ -33,24 +40,46 @@
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.57.0",
+    "htmlparser2": "^12.0.0",
     "prettier": "^3.2.0",
     "react": "^19.2.6",
     "react-native": "^0.85.3",
     "react-native-svg": "^15.15.5",
+    "rollup": "^4.60.4",
+    "rollup-plugin-dts": "^6.4.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "ts-node": "^10.9.0",
     "typescript": "^5.4.0"
   },
   "keywords": [
+    "rn-vector-icons",
+    "vector-icons",
     "react-native",
+    "react-native-vector-icons",
+    "react-native-icons",
+    "expo",
+    "expo-vector-icons",
+    "expo-icons",
     "icons",
     "svg",
+    "svg-icons",
     "vector-icons",
-    "react-native-svg"
+    "react-native-svg",
+    "duotone",
+    "duotone-icons",
+    "icon-set",
+    "icon-library",
+    "ui-icons",
+    "color-icons"
   ],
   "author": "Shiwam Shahare",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/shiwam/rn-vector-icons.git"
+  },
+  "homepage": "https://github.com/shiwam/rn-vector-icons#readme",
+  "bugs": {
+    "url": "https://github.com/shiwam/rn-vector-icons/issues"
   }
 }
