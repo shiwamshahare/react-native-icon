@@ -1,0 +1,54 @@
+{
+  "name": "react-native-icons-shiwam",
+  "version": "0.1.0",
+  "description": "A production-ready React Native vector icon library built from SVG sources",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "codegen": "ts-node --project tsconfig.scripts.json scripts/codegen.ts",
+    "build": "npm run codegen && tsc && node scripts/build-esm.js",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src/ --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"scripts/**/*.{ts,js}\""
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-native": ">=0.70",
+    "react-native-svg": ">=13"
+  },
+  "devDependencies": {
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.0",
+    "react": "^19.2.6",
+    "react-native": "^0.85.3",
+    "react-native-svg": "^15.15.5",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.4.0"
+  },
+  "keywords": [
+    "react-native",
+    "icons",
+    "svg",
+    "vector-icons",
+    "react-native-svg"
+  ],
+  "author": "Shiwam Shahare",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

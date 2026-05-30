@@ -1,0 +1,7 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse fill="black" cx="12" cy="7" rx="8" ry="3"/>
+<path fill="black" d="M20 12C20 13.6569 16.4183 15 12 15C7.58172 15 4 13.6569 4 12"/>
+<path fill="black" d="M20 17C20 18.6569 16.4183 20 12 20C7.58172 20 4 18.6569 4 17"/>
+<path fill="black" d="M4 7L4 17"/>
+<path fill="black" d="M20 7L20 17"/>
+</svg>

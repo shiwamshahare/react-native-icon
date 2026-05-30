@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill="black" d="M19 21V14H5V21"/>
+<path fill="black" d="M9 5H15V11H9V5Z"/>
+<rect fill="black" x="18" y="3" width="3" height="3"/>
+<path fill="black" d="M18 8H22V12"/>
+<rect fill="black" width="3" height="3" transform="matrix(-1 0 0 1 6 3)"/>
+<path fill="black" d="M6 8H2V12"/>
+</svg>

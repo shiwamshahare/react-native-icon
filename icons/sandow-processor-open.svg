@@ -1,0 +1,16 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.53846 7.38461C5.82901 6.51298 6.51298 5.82901 7.38461 5.53846V5.53846C10.3805 4.53983 13.6195 4.53983 16.6154 5.53846V5.53846C17.487 5.82901 18.171 6.51298 18.4615 7.38461V7.38461C19.4602 10.3805 19.4602 13.6195 18.4615 16.6154V16.6154C18.171 17.487 17.487 18.171 16.6154 18.4615V18.4615C13.6195 19.4602 10.3805 19.4602 7.38462 18.4615V18.4615C6.51298 18.171 5.82901 17.487 5.53846 16.6154V16.6154C4.53983 13.6195 4.53983 10.3805 5.53846 7.38461V7.38461Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M9.85714 10.2857C9.94987 10.1003 10.1003 9.94987 10.2857 9.85714V9.85714C11.3649 9.31756 12.6351 9.31756 13.7143 9.85714V9.85714C13.8997 9.94987 14.0501 10.1003 14.1429 10.2857V10.2857C14.6824 11.3649 14.6824 12.6351 14.1429 13.7143V13.7143C14.0501 13.8997 13.8997 14.0501 13.7143 14.1429V14.1429C12.6351 14.6824 11.3649 14.6824 10.2857 14.1429V14.1429C10.1003 14.0501 9.94987 13.8997 9.85714 13.7143V13.7143C9.31756 12.6351 9.31756 11.3649 9.85714 10.2857V10.2857Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M12 5V2" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M8 5V2" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M16 5V2" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M12 22V19" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M8 22V19" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M16 22V19" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M19 12L22 12" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M19 8L22 8" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M19 16L22 16" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M2 12L5 12" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M2 8L5 8" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path d="M2 16L5 16" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+</svg>

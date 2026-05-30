@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect fill="black" x="5" y="5" width="2" height="2"/>
+<rect fill="black" x="8" y="5" width="2" height="2"/>
+<rect fill="black" x="17" y="5" width="2" height="2"/>
+<path fill="black" d="M21 21V3H3V21H21Z"/>
+<path fill="black" d="M8 14H16"/>
+<path fill="black" d="M12 10L12 18"/>
+</svg>

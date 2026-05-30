@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill="black" d="M12 5L12 3"/>
+<path fill="black" d="M12 21L12 19"/>
+<path fill="black" d="M16.9498 7.05025L18.364 5.63604"/>
+<path fill="black" d="M5.63608 18.364L7.05029 16.9497"/>
+<path fill="black" d="M18.9998 11.9999L20.9998 11.9999"/>
+<path fill="black" d="M3 12.0001L5 12.0001"/>
+<path fill="black" d="M16.9498 16.9497L18.364 18.3639"/>
+<path fill="black" d="M5.63608 5.63608L7.05029 7.05029"/>
+<circle fill="black" cx="12" cy="12" r="7"/>
+<circle fill="black" cx="14" cy="11" r="2"/>
+<circle fill="black" cx="10.5" cy="15.5" r="1.5"/>
+<circle fill="black" cx="9" cy="9" r="1"/>
+</svg>
