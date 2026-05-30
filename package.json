@@ -1,6 +1,6 @@
 {
   "name": "rn-vector-icons",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A production-ready React Native vector icon library built from SVG sources",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -76,10 +76,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shiwam/rn-vector-icons.git"
+    "url": "https://github.com/shiwamshahare/rn-vector-icons.git"
   },
-  "homepage": "https://github.com/shiwam/rn-vector-icons#readme",
+  "homepage": "https://github.com/shiwamshahare/rn-vector-icons#readme",
   "bugs": {
-    "url": "https://github.com/shiwam/rn-vector-icons/issues"
+    "url": "https://github.com/shiwamshahare/rn-vector-icons/issues"
   }
 }
