@@ -34,7 +34,10 @@ npm install rn-vector-icons
 
 ### Unified `<Icon />` Component (Recommended)
 
-The easiest way to render icons is via the unified `<Icon />` component. Your IDE will auto-complete the `name` prop for all 1,300+ available icons.
+The easiest way to render icons is via the unified `<Icon />` component. 
+
+#### For TypeScript (`.tsx`)
+If you are using TypeScript, your IDE will automatically auto-complete the `name` prop for all 1,300+ available icons!
 
 ```tsx
 import { Icon } from 'rn-vector-icons';
@@ -56,6 +59,24 @@ import { Icon } from 'rn-vector-icons';
   strokeWidth={1.5}
   accessibilityLabel="User profile settings" 
 />
+```
+
+#### For JavaScript (`.jsx`)
+If you are using pure JavaScript, the API is exactly the same! The library is pre-compiled, so it works flawlessly out of the box.
+
+```jsx
+import React from 'react';
+import { View } from 'react-native';
+import { Icon } from 'rn-vector-icons';
+
+export default function MyScreen() {
+  return (
+    <View>
+      <Icon name="freudian-home" size={24} />
+      <Icon name="freudian-home-filled" size={32} color="red" />
+    </View>
+  );
+}
 ```
 
 ### Available Categories & Styles
@@ -106,59 +127,6 @@ The `<Icon />` component and all individual icon components accept the following
 
 *Note: Any additional props (like `testID`, `onPress`) are spread directly onto the root `Svg` element.*
 
----
-
-## 🛠️ Developer Guide: Adding New Icons
-
-This library handles its own build pipeline, making it incredibly easy to scale. 
-
-### Step 1: Add the SVG
-Drop your new raw `.svg` file into the `icons/` folder.
-*If it's a duotone icon you want auto-variants for, make sure it has the `_duotone_` keyword.*
-
-```text
-rn-icon-library/
-└── icons/
-    └── my-new-category_duotone_example.svg
-```
-
-### Step 2: Generate Variants
-Run the variant generator. This script normalizes the file name (e.g. `my-new-category-example.svg`) and automatically writes the `-open` and `-filled` variants using intelligent DOM traversal.
-
-```bash
-node scripts/generate-variants.js
-```
-
-### Step 3: Run Codegen & Build
-Compile the SVGs into React Native components:
-
-```bash
-npm run codegen
-npm run build
-```
-This triggers SVGR to wrap the SVGs in React components, replaces hardcoded colors with React props via `scripts/codegen.ts`, updates the barrel files, and executes TypeScript compilation to `dist/`.
-
----
-
-## 📁 Repository Architecture
-
-```text
-rn-icon-library/
-├── icons/                   # 1,300+ Raw SVG files
-├── scripts/
-│   ├── generate-variants.js # AST/Regex logic to auto-generate open/filled styles
-│   ├── codegen.ts           # The SVGR code-generation pipeline
-│   ├── svgr-template.js     # Component injection template for SVGR
-│   └── build-esm.js         # ESM package wrapper
-├── src/
-│   ├── icons/               # 1,300+ Auto-generated React components (DO NOT EDIT)
-│   ├── Icon.tsx             # The unified entrypoint component
-│   ├── types.ts             # Prop types and the massive IconName union
-│   └── registry.ts          # Key-value map of names to component imports
-├── dist/                    # Compiled NPM bundle
-├── package.json             
-└── tsconfig.json            
-```
 
 ---
 
